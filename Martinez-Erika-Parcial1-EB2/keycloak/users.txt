@@ -1,0 +1,14 @@
+ CONFIGURACIONES USERS KEYCLOAK
+ 
+ 1. Usuario autenticado:
+	name: user
+	credentials: 123456 clave permanente
+	- Asigne en rol mapping del cliente: api-gateway client
+
+2. El api-gateway client tiene un rol de cliente user y es un rol compuesto
+   que esta asociado al rol del reino app_user.
+	
+3. Usuario no autenticado:
+	name: user2
+	como no esta autenticado no tiene credentials
+	- Asigne en rol mapping del cliente: api-gateway client
