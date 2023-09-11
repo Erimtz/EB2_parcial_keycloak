@@ -27,7 +27,7 @@ spring:
             scope:
               - openid
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:9090/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:8090/login/oauth2/code/keycloak
   application:
     name: ms-gateway
   cloud:
@@ -37,6 +37,12 @@ spring:
         - id: ms-bill
           uri: lb://ms-bill
           predicates:
-            - Path=/api/v1/bills/**
+            - Path=/api/v1/**
+          filters:
+            - StripPrefix=2
+        - id: ms-users
+          uri: lb://ms-users
+          predicates:
+            - Path=/api/v1/**
           filters:
             - StripPrefix=2
