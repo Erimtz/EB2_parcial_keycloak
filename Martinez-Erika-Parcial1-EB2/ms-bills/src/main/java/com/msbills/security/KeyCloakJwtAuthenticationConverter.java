@@ -47,7 +47,6 @@ public class KeyCloakJwtAuthenticationConverter implements Converter<Jwt, Abstra
     return authorityList;
   }
 
-
   private static List<GrantedAuthority> extractRolesRealmAccess(String route, JsonNode jwt) {
     Set<String> rolesWithPrefix = new HashSet<>();
 
@@ -62,7 +61,6 @@ public class KeyCloakJwtAuthenticationConverter implements Converter<Jwt, Abstra
     return authorityList;
   }
 
-
   private static List<GrantedAuthority> extractGroups(String route, JsonNode jwt) {
     Set<String> rolesWithPrefix = new HashSet<>();
 
@@ -75,6 +73,7 @@ public class KeyCloakJwtAuthenticationConverter implements Converter<Jwt, Abstra
 
     return authorityList;
   }
+
 
   public KeyCloakJwtAuthenticationConverter() {
   }

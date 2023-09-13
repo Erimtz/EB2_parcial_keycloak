@@ -24,9 +24,9 @@ public class BillController {
         return ResponseEntity.ok().body(service.getAllBill());
     }
 
-    @PostMapping("/create")
+    @PostMapping("/group")
     @PreAuthorize("hasAnyAuthority('GROUP_providers')")
-    public ResponseEntity<String> createBill(@RequestBody Bill bill) {
+    public ResponseEntity<String> createBillWithGroup(@RequestBody Bill bill) {
         boolean created = service.createBill(bill);
         if (created) {
             return ResponseEntity.ok("Factura creada con éxito.");

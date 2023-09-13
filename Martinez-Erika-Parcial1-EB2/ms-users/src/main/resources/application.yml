@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   application:
     name: ms-users
@@ -12,7 +14,6 @@ spring:
             client-id: user-client-credentials
             client-secret: GfqvsiQWLId1wgFOwSVgDtZt6GoywAMZ
             authorization-grant-type: client_credentials
-        #            provider: keycloak
         provider:
           keycloak:
             #            issuer-uri: http://localhost:8080/realms/bills
@@ -27,5 +28,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-server:
-  port: 8081
+

@@ -13,8 +13,8 @@ public class BillRepository {
         this.feingBillRespository = feingBillRespository;
     }
 
-    public  BillDTO findByUserId(Integer id){
-        ResponseEntity<BillDTO> response = feingBillRespository.findByUserId(id);
+    public  BillDTO findByUserId(String user_id){
+        ResponseEntity<BillDTO> response = feingBillRespository.findByUserId(Integer.valueOf(user_id));
         return response.getBody();
     }
 }

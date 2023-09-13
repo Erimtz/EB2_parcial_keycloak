@@ -21,7 +21,7 @@ public class UserService {
 
     public User findById(Integer id){
         User user = userRepository.stream().filter(_user -> Objects.equals(_user.getId(), id)).findFirst().orElse(null);
-        BillDTO billDTO = billRepository.findByUserId(id);
+        BillDTO billDTO = billRepository.findByUserId(String.valueOf(id));
         if (user != null)
             user.setBill(billDTO);
 

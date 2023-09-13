@@ -24,7 +24,7 @@ public class Bill {
 
     private String customerBill;
 
-    private String idUser;
+    private String user_id;
 
     private String productBill;
 

@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name= "ms-bills",url = "http://localhost:${PORT:0}", configuration = OAuthFeignConfig.class)
 public interface FeignBillRepository {
     @RequestMapping(method = RequestMethod.GET,value = "/bill/find")
-    ResponseEntity<BillDTO> findByUserId(@RequestParam Integer id);
+    ResponseEntity<BillDTO> findByUserId(@RequestParam Integer user_id);
 }
