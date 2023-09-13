@@ -24,8 +24,8 @@ public class BillController {
         return ResponseEntity.ok().body(service.getAllBill());
     }
 
-    @PostMapping("/group")
-    @PreAuthorize("hasAnyAuthority('GROUP_account')")
+    @PostMapping("/create")
+    @PreAuthorize("hasAnyAuthority('GROUP_providers')")
     public ResponseEntity<String> createBill(@RequestBody Bill bill) {
         boolean created = service.createBill(bill);
         if (created) {
@@ -35,7 +35,7 @@ public class BillController {
         }
     }
 
-    @GetMapping("/user/{userId}")
+    @GetMapping("/billsSearch/{userId}")
     @PreAuthorize("hasRole('ROLE_user')")
     public ResponseEntity<List<Bill>> getBillsByUserId(@PathVariable String userId) {
         List<Bill> userBills = service.getBillsByUserId(userId);
