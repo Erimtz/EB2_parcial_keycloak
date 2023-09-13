@@ -1,0 +1,523 @@
+{
+	"info": {
+		"_postman_id": "330a7405-4043-4fd2-aaaa-64f977bb7d91",
+		"name": "MartinezErika-espBackII",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18573665"
+	},
+	"item": [
+		{
+			"name": "Parcial",
+			"item": [
+				{
+					"name": "bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/v1/bills/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"bills",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token gateway",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "api-gateway-client",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://oauth.pstmn.io/v1/browser-callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "bills-token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/bills/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"bills",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token bearer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MjE5NzgsImlhdCI6MTY5NDYyMTY3OCwiYXV0aF90aW1lIjoxNjk0NjIxNjc3LCJqdGkiOiJjZTNhYTY5Yy0xOGViLTRhMWItYjVhMy1jZmY0ZDhhN2I1MTYiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI1NDkwOTM0ZS1lNTMxLTQ3M2UtYTdjMy05ZDJlNGY4Zjc1NTUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6IjU0OTA5MzRlLWU1MzEtNDczZS1hN2MzLTlkMmU0ZjhmNzU1NSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.nYs_uu1s6I98WPTUquDL2UOP0Yz546IsG-zwwMJ5yM4Ckqy0nhZvenfSTgZOoK8tdSwh71pxRyzIWqYEyLLnlfO6ktQL913LjNgpiWXwxdShxmiDbRK1bavCO0SxwzeJuIeJpyPVBe0KWfHIhmM9gYhTdHQeVJK57K39yxuQ66KtYN2M9sY0AuUxV3YLZ7zjeBZVGe3TzCwcrIUnyYKiuLno4lqR7JNythIT1Ie2Np7uzYjQDXaJum6QwDcyujzamjlzFvZypobUHrGNTVHZ5ezUiqXDdEapjx9gVgO-zonzQBi8VR8HgMJVfkW0uXXXvDEwI8WXJSt2oqW-ozfhlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/v1/bills/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"bills",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Final",
+			"item": [
+				{
+					"name": "Bills",
+					"item": [
+						{
+							"name": "Create Bill",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "redirect_uri",
+											"value": "https://oauth.pstmn.io/v1/browser-callback",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "user-name",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway-client",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/v1/bills/group",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"bills",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token Bearer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MzAzNDIsImlhdCI6MTY5NDYzMDA0MiwiYXV0aF90aW1lIjoxNjk0NjMwMDQxLCJqdGkiOiI4ZjRkOTY5MC1jM2JlLTRkNzQtOTgxYy1kMGRlOTk4OTkzY2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJjYTZlZWI3Yy1iOWI4LTQ4NGUtYjM2Yy0wNWIzMTYyMzJjZGMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6ImNhNmVlYjdjLWI5YjgtNDg0ZS1iMzZjLTA1YjMxNjIzMmNkYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.I51b541RdlHD11aPY-pzKkp3IZpJUkbTMytAIOWuqxWtV7NeqslDiIHiHt2YD7BGlvY_TDh_fw-aa2HU78L-8xfrSeZLEYGe5zYYvmzJCpz4WL-yatEBmLONiwcxtPSTvy8BzQIJkdonpDj3kLnPUf_Eyxa06-D3djiwbUuxfoAvHlUZ9aSBtv9zx-egrIwz3v5nQ9zVve-T1XwjhXIZ0aX_HgFLLWU4OzViYzknRgybd7lyODNf9P-Eu1N3F_DBuFt5GcS9-hgZ_D7P0kkexWV1R0PF8GItN9DXr5WBPLDKxZiYpClKfrrFniUlHscr1_9PBHsBqcbC0GjXXs3H_Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/v1/bills",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"bills"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bills By User Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/v1/bills/billsSearch/61b95f0c-939e-4496-9070-811801472db7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"bills",
+										"billsSearch",
+										"61b95f0c-939e-4496-9070-811801472db7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get new access token",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "redirect_uri",
+											"value": "https://oauth.pstmn.io/v1/browser-callback",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "user-name",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway-client",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/v1/bills",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"bills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Find By Id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "redirect_uri",
+											"value": "https://oauth.pstmn.io/v1/browser-callback",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "user-name",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway-client",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/users/find/61b95f0c-939e-4496-9070-811801472db7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"users",
+										"find",
+										"61b95f0c-939e-4496-9070-811801472db7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MjkzMjgsImlhdCI6MTY5NDYyOTAyOCwiYXV0aF90aW1lIjoxNjk0NjI5MDI3LCJqdGkiOiIzM2JmMmQwNy1jM2YyLTQ1NzAtYjRhOC1mMzk3YjdiNjYzOTgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiIyNzlhMWYyNy00YTczLTQwMjgtOGEwNi00ZGIwMmM2MTMzYWEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6IjI3OWExZjI3LTRhNzMtNDAyOC04YTA2LTRkYjAyYzYxMzNhYSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.F7rsrXLOvy7ZKZvoKfwXWWNj6KFhx2V1TpSzUhTIGuAKnKUzuhS6Lq05DNJ8xJNLOe69BYtyknmFlMkmXSfH-VmnzkdByVPXgdTBkTMecq8Zz1tjQpiRxV7aB7Hi5C7qmQCiKH-kh9bAPfiVl2K-8eZDKAYiA_avXmvHp67pLdtrIvF_mnHntFnGSP9ROoo99FmGM8x74VJca7E5bpjztoHZ0qBlU3mrlwqVEtFppc32MwscuLd05TokoUNQUenNY99bhBzf0aHRT-pDNVoQVrauPNVKgehxpIXAMmoZoFrIi6ZRps9OWecAQ7wX8WUb4hvwoyl-h-0KuCo1TDR91w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/bills",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"bills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Feing",
+					"item": [
+						{
+							"name": "find By User Id",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "redirect_uri",
+											"value": "https://oauth.pstmn.io/v1/browser-callback",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "authUrl",
+											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "user-name",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "api-gateway-client",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/users/bill/find/61b95f0c-939e-4496-9070-811801472db7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"users",
+										"bill",
+										"find",
+										"61b95f0c-939e-4496-9070-811801472db7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MjkzNTcsImlhdCI6MTY5NDYyOTA1NywiYXV0aF90aW1lIjoxNjk0NjI5MDU2LCJqdGkiOiI4ZGViNGQwZi1iMDA3LTRkM2EtYjAwMi05YTA0YWVkN2FkN2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI3YzliYTlmMy05ZTM4LTQ4MzEtOGQ4Ny0yZjM5ZGEyODgyMjkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6IjdjOWJhOWYzLTllMzgtNDgzMS04ZDg3LTJmMzlkYTI4ODIyOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.LgWOprSd4EDv6-DPlZxsQheRLLqB-AZ96DXbgKE-4uFoKqWqI9dZiFlc1UfxA6b09QzgjSs9nRDa5fbCntZlE14rerFbdKGuhUB53qYqh0wP7-qET2BLQaJx05wEYfmIp1palBPDQT2jWkHvRnd6WJISEiJnmCaues82VaYSeuOIqMYRzCFKEQH7PvEv6ysX9DRaZIn1XNb7LlRf2k41UViTl0E17efZva0rULqWuLOSDWX3Foc8vtkApWtbGME581ERGqidgrm_K8dUr7g1QoLt1mHFSvgJQyGyswmFyC5xBuhbLu_2XWbcTfeFaNmIyjXt3NyS4fkpqrBiA3E7HA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/bills",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"bills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
