@@ -674,8 +674,9 @@
         "http://localhost:9090/login/oauth2/code/keycloak"
       ],
       "webOrigins": [
-        "https://oauth/pstmn.io",
-        " http://localhost:8090/ "
+        "",
+        " http://localhost:9090",
+        "https://oauth/pstmn.io"
       ],
       "notBefore": 0,
       "bearerOnly": false,

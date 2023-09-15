@@ -6,14 +6,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class BillDTO {
     private String idBill;
     private String customerBill;
-    private String user_id;
     private String productBill;
     private Double totalPrice;
 
-    public BillDTO(String idBill, String customerBill,String user_id, String productBill, Double totalPrice) {
+    public BillDTO(String idBill, String customerBill, String productBill, Double totalPrice) {
         this.idBill = idBill;
         this.customerBill = customerBill;
-        this.user_id = user_id;
         this.productBill = productBill;
         this.totalPrice = totalPrice;
     }
@@ -35,14 +33,6 @@ public class BillDTO {
 
     public void setCustomerBill(String customerBill) {
         this.customerBill = customerBill;
-    }
-
-    public String getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(String idUser) {
-        this.user_id = user_id;
     }
 
     public String getProductBill() {

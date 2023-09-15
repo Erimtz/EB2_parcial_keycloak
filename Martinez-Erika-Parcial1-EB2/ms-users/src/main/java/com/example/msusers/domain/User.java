@@ -2,7 +2,7 @@ package com.example.msusers.domain;
 
 
 public class User {
-    private Integer id;
+    private String id;
     private String name;
     private String lastName;
     private String email;
@@ -11,14 +11,14 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String name, String lastName, String email) {
+    public User(String id, String name, String lastName, String email) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public User(Integer id, String name, String lastName, String email, BillDTO bill) {
+    public User(String id, String name, String lastName, String email, BillDTO bill) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -26,11 +26,11 @@ public class User {
         this.bill = bill;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -130,67 +130,66 @@
 					"name": "Bills",
 					"item": [
 						{
-							"name": "Create Bill",
+							"name": "Bills By User Id",
 							"request": {
 								"auth": {
-									"type": "oauth2",
-									"oauth2": [
+									"type": "bearer",
+									"bearer": [
 										{
-											"key": "redirect_uri",
-											"value": "https://oauth.pstmn.io/v1/browser-callback",
-											"type": "string"
-										},
-										{
-											"key": "scope",
-											"value": "",
-											"type": "string"
-										},
-										{
-											"key": "accessTokenUrl",
-											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
-											"type": "string"
-										},
-										{
-											"key": "tokenName",
-											"value": "user-name",
-											"type": "string"
-										},
-										{
-											"key": "clientSecret",
-											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
-											"type": "string"
-										},
-										{
-											"key": "clientId",
-											"value": "api-gateway-client",
-											"type": "string"
-										},
-										{
-											"key": "addTokenTo",
-											"value": "header",
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ3NTg5NTIsImlhdCI6MTY5NDc1ODY1MiwiYXV0aF90aW1lIjoxNjk0NzU4NjUxLCJqdGkiOiI1ZTE2YzM5My1jNzMwLTQwMTItODczYS00MWRkNDA3OTgxZTciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI5YTIxNGE3Yi03YjlmLTQ0OTctOTU3NC03NjQ5MDk0YWIwYTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIiIsIiBodHRwOi8vbG9jYWxob3N0OjkwOTAiLCJodHRwczovL29hdXRoL3BzdG1uLmlvIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWJpbGxzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pLXNjb3BlIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI5YTIxNGE3Yi03YjlmLTQ0OTctOTU3NC03NjQ5MDk0YWIwYTMiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIiLCJncm91cCI6WyIvcHJvdmlkZXJzIl19.V0_jB8uzMx2bli-XtHxLmj2faXogFWyd13y0B5qj7r7an_QrAviyDzrqem_lToKSA9xu2rsaLRyNn_69tZwFS_c_djO9dYsqgm0vqbtYZG9DMl2fuZmoX7MZjcVKkzkBZMl9eUmFTO3AEVxRigzSuZJe4tqwEY9baU-g_C_RkLeRsqCIkKQM8cZW8ZOxy1mGVmTDEAZowgswm4rPo-s2WUo0R6VJE4A_85q7LbR6qprdXCcJmlGH28yWKwmTDVJ9LBvNCyjXuzwOkUUOCz6pRUQBCvHCqMv-H0Lm3H4sxCdhOzNDIAQurdAtuuRTodWpU6r4GHO6jfvDUDnbu56rHQ",
 											"type": "string"
 										}
 									]
 								},
-								"method": "POST",
+								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8090/api/v1/bills/group",
+									"raw": "http://localhost:9090/api/v1/bills/billsSearch/61b95f0c-939e-4496-9070-811801472db7",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
+									"port": "9090",
 									"path": [
 										"api",
 										"v1",
 										"bills",
-										"group"
+										"billsSearch",
+										"61b95f0c-939e-4496-9070-811801472db7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bills By User Id sin Gateway",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ3NTkyMjIsImlhdCI6MTY5NDc1ODkyMiwiYXV0aF90aW1lIjoxNjk0NzU4OTIxLCJqdGkiOiJiMmFlZmI2Mi05ZWNmLTQ5OTEtOTMwNi04MmYyMjkxNTMzNjciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJhMWQ3NWJhYi02OTRhLTQ5YjUtYjZkNS0zZTlkOGQwZWUyMWYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIiIsIiBodHRwOi8vbG9jYWxob3N0OjkwOTAiLCJodHRwczovL29hdXRoL3BzdG1uLmlvIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWJpbGxzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pLXNjb3BlIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiJhMWQ3NWJhYi02OTRhLTQ5YjUtYjZkNS0zZTlkOGQwZWUyMWYiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIiLCJncm91cCI6WyIvcHJvdmlkZXJzIl19.H-mNEy0F1wGipYTLfqDgZbsg_jCYwk09tzP4wiPSElLHNAZasg-XUe4LMcGpZoUVxXixWbMHsKCfQo7-FXeM800lscKMsC1cjbm_KvAc3d7nYXABNqTqJEbivZK9JJRXZRBHuEKx5ai-xDtepBiwb-PXcxf8bIr4Y23cApAuSUkhBXhSiWiduDoXIbWsE05TF0N5qxziWmoSfol-oytk1fyyJGKIPPb5NpfjMRpgWivewkO1yR3neRmUds7bpiv1ou-X3EgGhGJQ5diqdtFsbkOCUexnbuS8Ori1ld9X-oRFztj66Ej7L1tgs24-uGtGa0eIgEisWX8kfqbc1XqRfw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/api/v1/bills/billsSearch/61b95f0c-939e-4496-9070-811801472db7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"api",
+										"v1",
+										"bills",
+										"billsSearch",
+										"61b95f0c-939e-4496-9070-811801472db7"
 									]
 								}
 							},
@@ -204,7 +203,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MzAzNDIsImlhdCI6MTY5NDYzMDA0MiwiYXV0aF90aW1lIjoxNjk0NjMwMDQxLCJqdGkiOiI4ZjRkOTY5MC1jM2JlLTRkNzQtOTgxYy1kMGRlOTk4OTkzY2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJjYTZlZWI3Yy1iOWI4LTQ4NGUtYjM2Yy0wNWIzMTYyMzJjZGMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6ImNhNmVlYjdjLWI5YjgtNDg0ZS1iMzZjLTA1YjMxNjIzMmNkYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.I51b541RdlHD11aPY-pzKkp3IZpJUkbTMytAIOWuqxWtV7NeqslDiIHiHt2YD7BGlvY_TDh_fw-aa2HU78L-8xfrSeZLEYGe5zYYvmzJCpz4WL-yatEBmLONiwcxtPSTvy8BzQIJkdonpDj3kLnPUf_Eyxa06-D3djiwbUuxfoAvHlUZ9aSBtv9zx-egrIwz3v5nQ9zVve-T1XwjhXIZ0aX_HgFLLWU4OzViYzknRgybd7lyODNf9P-Eu1N3F_DBuFt5GcS9-hgZ_D7P0kkexWV1R0PF8GItN9DXr5WBPLDKxZiYpClKfrrFniUlHscr1_9PBHsBqcbC0GjXXs3H_Q",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ3NTQ2ODcsImlhdCI6MTY5NDc1NDM4NywiYXV0aF90aW1lIjoxNjk0NzU0Mzg3LCJqdGkiOiIxNTczOGY3NC03NjUwLTQ5N2MtODVjZi0xMjQxMGYwNmNjNTkiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI1NjVkM2YyMC1iNzk2LTQ3NzYtYjNhYy0wNGUzNTFkYWE4ZGQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIiIsIiBodHRwOi8vbG9jYWxob3N0OjkwOTAiLCJodHRwczovL29hdXRoL3BzdG1uLmlvIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWJpbGxzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pLXNjb3BlIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1NjVkM2YyMC1iNzk2LTQ3NzYtYjNhYy0wNGUzNTFkYWE4ZGQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIiLCJncm91cCI6WyIvcHJvdmlkZXJzIl19.ZPrEnqto0BgEFfcqZJ4gE6ly5ZM9IWCopchBr4ZC8UoT4uv1bzD7yBRhhxJS2LHWkEsRJLaZ9vn4uVQHi-tZ0Pk2QqQfEhtHt60nszz-I7Kv44RsslZCqfw7IUejjZfKV2jaQnUR-92isxIXMsiGGLWXWXF5c9gA1FFEP2fqW738l56KlPRtV49Gp-mpvVoUcBWvRDp35Qc_rUJz0JmqyYCreXDr5bH_3WBbUW6WWW7c3gBaKadxLcIfhPtXv9XuKp3O0O3-p4NMBxOtA0lyzi2vbrSmjyGBtH0raSE8Tk3J5JyPk-0On1ZogDLMscUiNvxsqmQdy1dEpgA5Cs3jDQ",
 											"type": "string"
 										}
 									]
@@ -212,99 +211,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8090/api/v1/bills",
+									"raw": "localhost:9090/api/v1/bills",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
-									"path": [
-										"api",
-										"v1",
-										"bills"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Bills By User Id",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8090/api/v1/bills/billsSearch/61b95f0c-939e-4496-9070-811801472db7",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8090",
-									"path": [
-										"api",
-										"v1",
-										"bills",
-										"billsSearch",
-										"61b95f0c-939e-4496-9070-811801472db7"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get new access token",
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": [
-										{
-											"key": "redirect_uri",
-											"value": "https://oauth.pstmn.io/v1/browser-callback",
-											"type": "string"
-										},
-										{
-											"key": "scope",
-											"value": "",
-											"type": "string"
-										},
-										{
-											"key": "accessTokenUrl",
-											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/token",
-											"type": "string"
-										},
-										{
-											"key": "authUrl",
-											"value": "http://localhost:8080/realms/bills/protocol/openid-connect/auth",
-											"type": "string"
-										},
-										{
-											"key": "tokenName",
-											"value": "user-name",
-											"type": "string"
-										},
-										{
-											"key": "clientSecret",
-											"value": "hEGqEhG6BDBzrHyR01eyndfTSicBQ2zH",
-											"type": "string"
-										},
-										{
-											"key": "clientId",
-											"value": "api-gateway-client",
-											"type": "string"
-										},
-										{
-											"key": "addTokenTo",
-											"value": "header",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:8090/api/v1/bills",
-									"host": [
-										"localhost"
-									],
-									"port": "8090",
+									"port": "9090",
 									"path": [
 										"api",
 										"v1",
@@ -370,13 +281,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8081/users/find/61b95f0c-939e-4496-9070-811801472db7",
+									"raw": "http://localhost:8081/api/v2/users/find/61b95f0c-939e-4496-9070-811801472db7",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8081",
 									"path": [
+										"api",
+										"v2",
 										"users",
 										"find",
 										"61b95f0c-939e-4496-9070-811801472db7"
@@ -393,7 +306,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MjkzMjgsImlhdCI6MTY5NDYyOTAyOCwiYXV0aF90aW1lIjoxNjk0NjI5MDI3LCJqdGkiOiIzM2JmMmQwNy1jM2YyLTQ1NzAtYjRhOC1mMzk3YjdiNjYzOTgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiIyNzlhMWYyNy00YTczLTQwMjgtOGEwNi00ZGIwMmM2MTMzYWEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6IjI3OWExZjI3LTRhNzMtNDAyOC04YTA2LTRkYjAyYzYxMzNhYSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.F7rsrXLOvy7ZKZvoKfwXWWNj6KFhx2V1TpSzUhTIGuAKnKUzuhS6Lq05DNJ8xJNLOe69BYtyknmFlMkmXSfH-VmnzkdByVPXgdTBkTMecq8Zz1tjQpiRxV7aB7Hi5C7qmQCiKH-kh9bAPfiVl2K-8eZDKAYiA_avXmvHp67pLdtrIvF_mnHntFnGSP9ROoo99FmGM8x74VJca7E5bpjztoHZ0qBlU3mrlwqVEtFppc32MwscuLd05TokoUNQUenNY99bhBzf0aHRT-pDNVoQVrauPNVKgehxpIXAMmoZoFrIi6ZRps9OWecAQ7wX8WUb4hvwoyl-h-0KuCo1TDR91w",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ3NjEyMjIsImlhdCI6MTY5NDc2MDkyMiwiYXV0aF90aW1lIjoxNjk0NzYwOTIyLCJqdGkiOiIxZDMyMzI2Ni00NWE1LTQ1MmMtODZlYy00MTk2MzdhMGYyMzMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI1ZDdlYWY5OC00OGVmLTQxY2UtYThkOS1kZDQ5NmQ3ODk4M2MiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIiIsIiBodHRwOi8vbG9jYWxob3N0OjkwOTAiLCJodHRwczovL29hdXRoL3BzdG1uLmlvIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWJpbGxzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pLXNjb3BlIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1ZDdlYWY5OC00OGVmLTQxY2UtYThkOS1kZDQ5NmQ3ODk4M2MiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIiLCJncm91cCI6WyIvcHJvdmlkZXJzIl19.eFKq_3xwrbb04E-GWDzna2G39Rqu000V47cOqdaMXZK3kjrashPWMjlhkk887MaN0ruULEtP6YxrIY60AY_uVI-FpeAyu2TFLHVJSgmdhbDJJP46o69kHZ28pITNsDtBhxWIxwaT1HhPoA8Gd2V4Jt5_pTbcKWXj76PC6e4m9DMmDfKeSHUpUUyK9aHIm1U-Wruv6QbckZ77532DFafi2azO1q7w4A0esgv1IIeaesGbNBUY546VnRLA3Tbp1G8zIAZMnPFEJwfwIewxny93vMJ9oxLU0Gk5yfQkrQ1FjzG2uoi98ha6UXS73kV28_99j5x89WXtq25uEzwo3FhUIQ",
 											"type": "string"
 										}
 									]
@@ -401,14 +314,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8090/bills",
-									"protocol": "http",
+									"raw": "localhost:9090/api/v2/users",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
+									"port": "9090",
 									"path": [
-										"bills"
+										"api",
+										"v2",
+										"users"
 									]
 								}
 							},
@@ -470,7 +384,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8081/users/bill/find/61b95f0c-939e-4496-9070-811801472db7",
+									"raw": "http://localhost:8081/users/bills/find/61b95f0c-939e-4496-9070-811801472db7",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -478,7 +392,7 @@
 									"port": "8081",
 									"path": [
 										"users",
-										"bill",
+										"bills",
 										"find",
 										"61b95f0c-939e-4496-9070-811801472db7"
 									]
@@ -494,7 +408,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ2MjkzNTcsImlhdCI6MTY5NDYyOTA1NywiYXV0aF90aW1lIjoxNjk0NjI5MDU2LCJqdGkiOiI4ZGViNGQwZi1iMDA3LTRkM2EtYjAwMi05YTA0YWVkN2FkN2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI3YzliYTlmMy05ZTM4LTQ4MzEtOGQ4Ny0yZjM5ZGEyODgyMjkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb2F1dGgvcHN0bW4uaW8iLCIgaHR0cDovL2xvY2FsaG9zdDo4MDkwLyAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYmlsbHMiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoibWktc2NvcGUgZW1haWwgcHJvZmlsZSIsInNpZCI6IjdjOWJhOWYzLTllMzgtNDgzMS04ZDg3LTJmMzlkYTI4ODIyOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlciIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImdyb3VwIjpbIi9wcm92aWRlcnMiXX0.LgWOprSd4EDv6-DPlZxsQheRLLqB-AZ96DXbgKE-4uFoKqWqI9dZiFlc1UfxA6b09QzgjSs9nRDa5fbCntZlE14rerFbdKGuhUB53qYqh0wP7-qET2BLQaJx05wEYfmIp1palBPDQT2jWkHvRnd6WJISEiJnmCaues82VaYSeuOIqMYRzCFKEQH7PvEv6ysX9DRaZIn1XNb7LlRf2k41UViTl0E17efZva0rULqWuLOSDWX3Foc8vtkApWtbGME581ERGqidgrm_K8dUr7g1QoLt1mHFSvgJQyGyswmFyC5xBuhbLu_2XWbcTfeFaNmIyjXt3NyS4fkpqrBiA3E7HA",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5aHVWa3FiRU1WLWp3YzlPM3libFNLVjhNeDF2UEFDdk5leW9kUndHSE5jIn0.eyJleHAiOjE2OTQ3NjEyMjIsImlhdCI6MTY5NDc2MDkyMiwiYXV0aF90aW1lIjoxNjk0NzYwOTIyLCJqdGkiOiIxZDMyMzI2Ni00NWE1LTQ1MmMtODZlYy00MTk2MzdhMGYyMzMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2JpbGxzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjYxYjk1ZjBjLTkzOWUtNDQ5Ni05MDcwLTgxMTgwMTQ3MmRiNyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwaS1nYXRld2F5LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI1ZDdlYWY5OC00OGVmLTQxY2UtYThkOS1kZDQ5NmQ3ODk4M2MiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIiIsIiBodHRwOi8vbG9jYWxob3N0OjkwOTAiLCJodHRwczovL29hdXRoL3BzdG1uLmlvIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLWJpbGxzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im1pLXNjb3BlIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1ZDdlYWY5OC00OGVmLTQxY2UtYThkOS1kZDQ5NmQ3ODk4M2MiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIiLCJncm91cCI6WyIvcHJvdmlkZXJzIl19.eFKq_3xwrbb04E-GWDzna2G39Rqu000V47cOqdaMXZK3kjrashPWMjlhkk887MaN0ruULEtP6YxrIY60AY_uVI-FpeAyu2TFLHVJSgmdhbDJJP46o69kHZ28pITNsDtBhxWIxwaT1HhPoA8Gd2V4Jt5_pTbcKWXj76PC6e4m9DMmDfKeSHUpUUyK9aHIm1U-Wruv6QbckZ77532DFafi2azO1q7w4A0esgv1IIeaesGbNBUY546VnRLA3Tbp1G8zIAZMnPFEJwfwIewxny93vMJ9oxLU0Gk5yfQkrQ1FjzG2uoi98ha6UXS73kV28_99j5x89WXtq25uEzwo3FhUIQ",
 											"type": "string"
 										}
 									]
@@ -502,14 +416,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8090/bills",
+									"raw": "http://localhost:9090/api/v2bills",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
+									"port": "9090",
 									"path": [
-										"bills"
+										"api",
+										"v2bills"
 									]
 								}
 							},

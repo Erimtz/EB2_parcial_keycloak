@@ -1,6 +1,6 @@
 # Configuraciones del servidor
 server:
-  port: 8090
+  port: 9090
 # Configuraciones de eureka
 eureka:
   instance:
@@ -34,8 +34,8 @@ spring:
     gateway:
       default-filters: TokenRelay
       routes:
-        - id: ms-bill
-          uri: lb://ms-bill
+        - id: ms-bills
+          uri: http://localhost:8086
           predicates:
             - Path=/api/v1/**
           filters:
@@ -43,5 +43,6 @@ spring:
         - id: ms-users
           uri: http://localhost:8081
           predicates:
-            - Path=/users/**
-
+            - Path=/api/v2/**
+          filters:
+            - StripPrefix=2

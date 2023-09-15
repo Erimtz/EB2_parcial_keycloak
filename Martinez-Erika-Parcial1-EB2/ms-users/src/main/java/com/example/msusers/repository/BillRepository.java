@@ -1,5 +1,6 @@
 package com.example.msusers.repository;
 
+import com.example.msusers.client.FeignBillRepository;
 import com.example.msusers.domain.BillDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
@@ -13,8 +14,8 @@ public class BillRepository {
         this.feingBillRespository = feingBillRespository;
     }
 
-    public  BillDTO findByUserId(String user_id){
-        ResponseEntity<BillDTO> response = feingBillRespository.findByUserId(Integer.valueOf(user_id));
+    public  BillDTO findByUserId(String id){
+        ResponseEntity<BillDTO> response = feingBillRespository.findByUserId(id);
         return response.getBody();
     }
 }

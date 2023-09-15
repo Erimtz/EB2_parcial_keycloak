@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
-@RequestMapping("/bills")
+@RequestMapping("/api/v1/bills")
 @RequiredArgsConstructor
 public class BillController {
 
